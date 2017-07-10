@@ -8,11 +8,15 @@
   <h1 id="title">Just The Links</h1>
   <h2 id="subtitle">Accessible programming news and links from Hackernews, without the peanut gallery.</h2>
 
-  <% @hackernews_entries.each do |e| %>
-  <div class="article-link">
-    <h5>Title: <%= e.link.title %></h5>
-    <p><%= e.voting.score %> points</p>
-    <a href="<%= e.link.href %>">[article]</a>
+  <div id="articles">
+    <% @hackernews_entries.each do |e| %>
+    <div class="article-link">
+      <h5>Title: <%= e.link.title %></h5>
+      <p><%= e.voting.score %> points</p>
+      <a href="<%= e.link.href %>" target="_blank">[article]</a>
+      <a href="<%= e.comments_url %>" target="_blank">[comments, if you really want]</a>
+    </div>
+    <% end %>
   </div>
-  <% end %>
+
 </body>
