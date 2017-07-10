@@ -6,21 +6,13 @@
 </head>
 <body>
   <h1 id="title">Just The Links</h1>
-  <h2 id="subtitle">Programming news and links, without the peanut gallery.</h2>
+  <h2 id="subtitle">Accessible programming news and links from Hackernews, without the peanut gallery.</h2>
 
-  <h3>Hackernews</h3>
   <% @hackernews_entries.each do |e| %>
   <div class="article-link">
     <h5>Title: <%= e.link.title %></h5>
-    <a href="<%= e.link.href %>">link to article</a>
-
-  </div>
-  <% end %>
-
-  <h3>Reddit</h3>
-  <% @reddit_entries.each do |e| %>
-  <div class="article-link">
-
+    <p><%= e.voting.score %> points</p>
+    <a href="<%= e.link.href %>">[article]</a>
   </div>
   <% end %>
 </body>
