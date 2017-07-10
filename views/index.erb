@@ -1,1 +1,19 @@
-<h1>Hey there</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/application.css">
+  <title>Just The Links</title>
+</head>
+<body>
+  <h1 id="title">Just The Links</h1>
+  <h2 id="subtitle">Programming news and links, without the peanut gallery.</h2>
+
+  <h3>Hacker news</h3>
+  <% @entries.each do |e| %>
+  <div class="article-link">
+    <h5>Title: <%= e.link.title %></h5>
+    <a href="<%= e.link.href %>">link</a>
+
+  </div>
+  <% end %>
+</body>
