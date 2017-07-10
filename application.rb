@@ -3,6 +3,7 @@ require 'ruby-hackernews'
 include RubyHackernews
 
 get '/' do
-  @entries = Entry.all
+  @hackernews_entries = Entry.all
+  @reddit_entries = []
   erb :index
 end
