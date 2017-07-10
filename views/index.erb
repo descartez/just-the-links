@@ -5,21 +5,19 @@
   <title>Just The Links</title>
 </head>
 <body>
-  <div class="">
-    <h1 id="title">Just The Links</h1>
-    <h2 id="subtitle">Accessible programming news and links from Hackernews</h2>
+  <nav>
+    <h1 id="nav-title">Just The Links: <span id="nav-subtitle">Accessible programming news and links from Hackernews<span></h2>
     <a href="/">[main]</a>
     <a href="/newest">[newest]</a>
     <a href="/jobs">[jobs]</a>
-
-  </div>
+  </nav>
   <h3><%= @header %></h3>
   <div id="articles">
     <% @hackernews_entries.each do |e| %>
     <div class="article">
       <h5>Title: <%= e.link.title %></h5>
       <p><%= e.voting.score %> points</p>
-      <p><%= e.time.strftime("%D, %T") %></p>
+      <p><%= e.time.strftime("%T, %D") %></p>
 
 
       <a class='article-link' href="<%= e.link.href %>" target="_blank">[article]</a>

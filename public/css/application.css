@@ -1,3 +1,17 @@
+nav {
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+#nav-title {
+  font-size: 1.2em;
+}
+
+#nav-subtitle {
+  font-size: 0.9em;
+  padding-left: 5px;
+}
+
 #articles {
 }
 
@@ -5,7 +19,6 @@
   border: 1px solid black;
   padding: 5px;
   margin: 10px;
-  width: 50%;
 }
 
 .article h5 {
