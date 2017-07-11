@@ -2,7 +2,7 @@
     <div id="articles">
       <% @hackernews_entries.each do |e| %>
       <article class="article">
-        <h5><a href="<%= e.link.href %>"><%= e.link.title %></a></h5>
+        <h5><a href="<%= e.link.href %>" target="_blank"><%= e.link.title %></a></h5>
         <p><%= e.time.strftime("%T, %D") %></p>
 
         <a class='article-link' href="<%= e.link.href %>" target="_blank">[job]</a>
