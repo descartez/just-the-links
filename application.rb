@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'ruby-hackernews'
+require 'shotgun'
 include RubyHackernews
 
 get '/' do
