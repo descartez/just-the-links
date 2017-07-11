@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="css/application.css">
-  <title>Just The Links</title>
-</head>
-<body>
-  <nav>
-    <h1 id="nav-title">Just The Links: <span id="nav-subtitle">Accessible programming news and links from Hackernews<span></h2>
-      <a href="/">[main]</a>
-      <a href="/newest">[newest]</a>
-      <a href="/jobs">[jobs]</a>
-      <a href="/about">[about]</a>
-    </nav>
-    <h3><%= @header %></h3>
-    <div id="articles">
-      <% @hackernews_entries.each do |e| %>
-      <div class="article">
-        <h5><a href="<%= e.link.href %>"><%= e.link.title %></a></h5>
-        <p><%= e.voting.score %> points</p>
-        <p><%= e.time.strftime("%T, %D") %></p>
-
-        <a href="<%= e.comments_url %>" target="_blank">[<%= e.comments_count %> comment(s) (if you really want them)]</a>
-      </div>
-      <% end %>
-    </div>
-
-  </body>
+<div id="articles">
+  <% @hackernews_entries.each do |e| %>
+  <article class="article">
+    <h5><a href="<%= e.link.href %>"><%= e.link.title %></a></h5>
+    <p><%= e.voting.score %> points</p>
+    <p><%= e.time.strftime("%T, %D") %></p>
+    <a href="<%= e.comments_url %>" target="_blank">[<%= e.comments_count %> comment(s) (if you really want them)]</a>
+  </article>
+  <% end %>
+</div>
