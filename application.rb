@@ -20,3 +20,8 @@ get '/jobs' do
   @hackernews_entries = Entry.jobs
   erb :jobs
 end
+
+get '/about' do
+  @header = "About"
+  erb :about
+end
