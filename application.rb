@@ -17,5 +17,5 @@ end
 get '/jobs' do
   @header = "Jobs"
   @hackernews_entries = Entry.jobs
-  erb :index
+  erb :jobs
 end
