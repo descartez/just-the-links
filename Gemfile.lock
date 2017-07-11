@@ -25,6 +25,7 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     ntlm-http (0.1.1)
+    puma (3.9.1)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -50,6 +51,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  puma
   ruby-hackernews
   shotgun
   sinatra
