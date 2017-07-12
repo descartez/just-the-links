@@ -1,6 +1,6 @@
 
     <div id="articles">
-      <% @hackernews_entries.each do |e| %>
+      <% @job_entries.each do |e| %>
       <article class="article">
         <h5><a href="<%= e.link.href %>" target="_blank"><%= e.link.title %></a></h5>
         <p><%= e.time.strftime("%T, %D") %></p>

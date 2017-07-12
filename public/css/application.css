@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 nav {
   border: 1px solid grey;
   padding: 5px;
@@ -5,6 +11,20 @@ nav {
 
 #nav-title {
   font-size: 1.2em;
+}
+
+#nav-items {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#nav-items li {
+  float: left;
+  margin: 5px;
+}
+
+#nav-items li a {
+  font-size: 1.em;
 }
 
 #nav-subtitle {

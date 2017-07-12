@@ -9,6 +9,12 @@ get '/' do
   erb :index
 end
 
+get '/page/:page' do
+  @header = "Main"
+  @hackernews_entries = Entry.all(params['page'].to_i)
+  erb :index
+end
+
 get '/newest' do
   @header = "Newest"
   @hackernews_entries = Entry.newest
@@ -17,7 +23,7 @@ end
 
 get '/jobs' do
   @header = "Jobs"
-  @hackernews_entries = Entry.jobs
+  @job_entries = Entry.jobs
   erb :jobs
 end
 

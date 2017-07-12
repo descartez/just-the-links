@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="css/application.css">
-  <title>Just The Links</title>
-</head>
-<body>
-  <nav>
-    <h1 id="nav-title">Just The Links: <span id="nav-subtitle">Accessible programming news and links from Hackernews<span></h2>
-      <a href="/">[main]</a>
-      <a href="/newest">[newest]</a>
-      <a href="/jobs">[jobs]</a>
-      <a href="/about">[about]</a>
-    </nav>
-    <h3><%= @header %></h3>
-    <%= yield %>
-
-  </body>
+  <head>
+    <link href="<%= url('/css/application.css') %>" rel="stylesheet" type="text/css" />
+    <title>Just The Links</title>
+  </head>
+  <body>
+    <nav>
+      <h1 id="nav-title">Just The Links: <span id="nav-subtitle">Accessible programming news and links from Hackernews<span></h2>
+        <ul id='nav-items'>
+          <li><a href="/">[main]</a></li>
+          <li><a href="/newest">[newest]</a></li>
+          <li><a href="/jobs">[jobs]</a></li>
+          <li><a href="/about">[about]</a></li>
+        </ul>
+      </nav>
+      <h3><%= @header %></h3>
+      <%= yield %>
+    </body>
