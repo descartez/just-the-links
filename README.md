@@ -14,4 +14,4 @@ If you wish to contribute, clone the repo, set up a new branch, make your change
 
 ### Starting
 
-Once you've cloned the repo, run `bundle` then `bundle exec shotgun`
+Once you've cloned the repo, run `bundle` then `bundle exec shotgun`.
